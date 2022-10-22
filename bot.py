@@ -26,7 +26,7 @@ class languages(StatesGroup):
 
 @dp.message_handler(commands=['help'], state=None)
 async def help(message:types.Message):
-        await message.reply(replicas.messages['help'])
+    await message.reply(replicas.messages['help'])
 
 
 @dp.message_handler(commands=['start'])
@@ -52,42 +52,70 @@ async def f(message:types.Message, state: FSMContext):
 async def end(message:types.Message, state: FSMContext):
     if message.text == "Учить новые слова":
         await languages.how_many_words.set()
-        await message.answer("Сколько слов вы хотите выучить за этот сеанс?", reply_markup=kb.how_many_keyboard)
-        async with state.proxy() as data:
-            data['cnt_session'] = 0
-
+        await message.reply("Сколько слов вы хотите выучить за этот сеанс?", reply_markup=kb.how_many_keyboard)
+    else:
+        await message.reply("Не понял вас. Вы можете приступить к изучению новых слов, просто нажмите кнопку.", reply_markup=kb.main_keyboard)
 
 @dp.message_handler(state=languages.how_many_words)
 async def end1(message:types.Message, state: FSMContext):
-    if message.text.isdigit():
-        async with state.proxy() as data:
-            data['current_words_number'] = int(message.text)
-        await languages.learning.set()
-        await message.answer("Понятно, приступим.", reply_markup=kb.new_words_keyboard)
+    if not message.text.isdigit() or int(message.text) <= 0:
+        await message.reply("Пожалуйста, отправьте натуральное число - количество слов.", reply_markup=kb.how_many_keyboard)
+        return
+    else:
         async with state.proxy() as data:
             word = get_word(data['chosen'])
-            await message.answer(f"Вы знаете это слово? {word[0]}")
-            data['current_word'] = word
-            await languages.next.set()
+            data["per_session"] = int(message.text)
+            data["current_number"] = 0
+            data["current_word"] = word
+            data.setdefault("all_the_words", []).append(word)
+            await message.reply(f"Вы знаете, как переводится '{word[0]}'?", reply_markup=kb.new_words_keyboard)
+
+            await languages.learning.set()
 
 
-
-
-@dp.message_handler(state=languages.next)
+@dp.message_handler(state=languages.learning)
 async def end3(message:types.Message, state: FSMContext):
+    if message.text == "Завершить сеанс":
+        await message.reply(f"Хорошо, завершаю.", reply_markup=kb.main_keyboard)
+        await languages.to_learn.set()
+        return None
+
     if message.text == "Не знаю":
         async with state.proxy() as data:
-            data.setdefault("learning_words", []).append(data['current_word'])
-            await message.answer(f"Запоминайте: {data['current_word']}")
-            data['cnt_session'] += 1
-            if data['cnt_session'] == data['current_words_number']:
-                await message.answer(f"Ваша тренировка завершена, отдохните)", reply_markup=kb.main_keyboard)
+            word = list(data['current_word'][:-1]) + ['—'] + [data['current_word'][-1]]
+            print(word)
+            await message.reply(f"Запоминайте: {' '.join(word)}.", reply_markup=kb.new_words_keyboard)
+
+            data['current_word'] = word
+            data['all_the_words'].append(word)
+
+            data['current_number'] += 1
+            if data['current_number'] == data['per_session']:
                 await languages.to_learn.set()
-                return
-    async with state.proxy() as data:
-        word = get_word(data['chosen'])
-        await message.answer(f"Вы знаете это слово? {word[0]}")
-        data['current_word'] = word
+                await message.reply("Ваша тренировка завершена, отдохните2.", reply_markup=kb.main_keyboard)
+                return None
+
+            word = get_word(data['chosen'])
+            await message.reply(f"Вы знаете, как переводится '{word[0]}'?", reply_markup=kb.new_words_keyboard)
+
+
+    else:
+        async with state.proxy() as data:
+            word = get_word(data['chosen'])
+
+            data['current_word'] = word
+            data['all_the_words'].append(word)
+
+            data['current_number'] += 1
+            if data['current_number'] == data['per_session']:
+                await languages.to_learn.set()
+                await message.reply("Ваша тренировка завершена, отдохните.", reply_markup=kb.main_keyboard)
+                return None
+
+            await message.reply(f"Вы знаете, как переводится '{word[0]}'?", reply_markup=kb.new_words_keyboard)
+            data['current_word'] = word
+            data['all_the_words'].append(word)
+
 
 
 if __name__ == '__main__':
