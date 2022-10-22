@@ -6,8 +6,6 @@ back_button = KeyboardButton('Назад')
 
 main_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 main_keyboard.row(KeyboardButton("Учить новые слова"))
-main_keyboard.row(KeyboardButton("Выберите язык"))
-main_keyboard.row(KeyboardButton("Разработчики"))
 
 word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 word_packs_keyboard.row(KeyboardButton("Английский"), KeyboardButton("Французский")).row(KeyboardButton("Немецкий"))
