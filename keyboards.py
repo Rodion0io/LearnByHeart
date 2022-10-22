@@ -2,22 +2,16 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
 return_button = KeyboardButton('Завершить сеанс')
+back_button = KeyboardButton('Назад')
 
 main_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-main_keyboard.row(KeyboardButton("Учить новые слова")).row(KeyboardButton("Повторить выученные слова"))
-main_keyboard.row(KeyboardButton("Добавить новый набор слов"))
+main_keyboard.row(KeyboardButton("Учить новые слова"))
+main_keyboard.row(KeyboardButton("Выберите язык"))
 main_keyboard.row(KeyboardButton("Разработчики"))
 
 word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 word_packs_keyboard.row(KeyboardButton("Английский"), KeyboardButton("Французский")).row(KeyboardButton("Немецкий"))
 
-english_word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-english_word_packs_keyboard.row(KeyboardButton("Oxford 3000"), KeyboardButton("12,500 Most Common Words"))
-english_word_packs_keyboard.row(KeyboardButton("Фразовые глаголы")).row(KeyboardButton("Идиомы"))
-
-english_word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-english_word_packs_keyboard.row(KeyboardButton("Oxford 3000"), KeyboardButton("Oxford 5000"))
-english_word_packs_keyboard.row(KeyboardButton("Фразовые глаголы")).row(KeyboardButton("Идиомы"))
 
 how_many_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 how_many_keyboard.row(KeyboardButton('5'), KeyboardButton('10'), KeyboardButton('15'))
