@@ -6,7 +6,7 @@ return_button = KeyboardButton('Завершить сеанс')
 main_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 main_keyboard.row(KeyboardButton("Учить новые слова")).row(KeyboardButton("Повторить выученные слова"))
 main_keyboard.row(KeyboardButton("Добавить новый набор слов"))
-main_keyboard.row(KeyboardButton("Разработчики"), KeyboardButton("Справка"))
+main_keyboard.row(KeyboardButton("Разработчики"))
 
 word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 word_packs_keyboard.row(KeyboardButton("Английский"), KeyboardButton("Французский")).row(KeyboardButton("Немецкий"))

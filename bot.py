@@ -14,6 +14,17 @@ async def start_bot(message:types.Message):
     await message.reply(choice(replicas.messages['greeting']),reply_markup=kb.main_keyboard)
 
 
+@dp.message_handler(commands=['help'])
+async def help(message:types.Message):
+        await message.reply(replicas.messages['help'])
+
+@dp.message_handler()
+async def add_new_words(message:types.Message):
+    if message.text == "Разработчики":
+        await message.answer(replicas.messages['developers'])
+
+
+
 
 
 if __name__ == '__main__':
