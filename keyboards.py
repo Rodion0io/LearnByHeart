@@ -12,7 +12,7 @@ word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 word_packs_keyboard.row(KeyboardButton("Английский"), KeyboardButton("Французский")).row(KeyboardButton("Немецкий"))
 
 english_word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-english_word_packs_keyboard.row(KeyboardButton("Oxford 3000"), KeyboardButton("Oxford 5000"))
+english_word_packs_keyboard.row(KeyboardButton("Oxford 3000"), KeyboardButton("12,500 Most Common Words"))
 english_word_packs_keyboard.row(KeyboardButton("Фразовые глаголы")).row(KeyboardButton("Идиомы"))
 
 english_word_packs_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
