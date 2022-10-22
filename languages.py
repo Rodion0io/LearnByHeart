@@ -15,5 +15,3 @@ def get_word(language: str):
         return choice(de)[-1::-1]
     else:
         return 42
-
-print(get_word("Английский"), get_word("Немецкий"), get_word("Французский"))

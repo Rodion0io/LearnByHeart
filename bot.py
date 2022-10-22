@@ -64,15 +64,13 @@ async def end1(message:types.Message, state: FSMContext):
             data['current_words_number'] = int(message.text)
         await languages.learning.set()
         await message.answer("Понятно, приступим.", reply_markup=kb.new_words_keyboard)
+        async with state.proxy() as data:
+            word = get_word(data['chosen'])
+            await message.answer(f"Вы знаете это слово? {word[0]}")
+            data['current_word'] = word
+            await languages.next.set()
 
 
-@dp.message_handler(state=languages.learning)
-async def end2(message:types.Message, state: FSMContext):
-    async with state.proxy() as data:
-        word = get_word(data['chosen'])
-        await message.answer(f"Вы знаете это слово? {word[0]}")
-        data['current_word'] = word
-        await languages.next.set()
 
 
 @dp.message_handler(state=languages.next)
@@ -85,7 +83,11 @@ async def end3(message:types.Message, state: FSMContext):
             if data['cnt_session'] == data['current_words_number']:
                 await message.answer(f"Ваша тренировка завершена, отдохните)", reply_markup=kb.main_keyboard)
                 await languages.to_learn.set()
-    await languages.learning.set()
+                return
+    async with state.proxy() as data:
+        word = get_word(data['chosen'])
+        await message.answer(f"Вы знаете это слово? {word[0]}")
+        data['current_word'] = word
 
 
 if __name__ == '__main__':
