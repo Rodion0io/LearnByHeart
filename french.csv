@@ -1,0 +1,601 @@
+french_word,russian_word
+abandonner,покидать
+accepter,принимать
+accompagner,сопровождать
+accord (m),"соглашение, договор"
+acheter,покупать
+adorer,обожать
+affaire (f),дело
+agent (m),"агент, действующая сила"
+agir,действовать
+aide,"(f) помощь, (m) помощник"
+aider,помогать
+aimer,любить
+ajouter,прибавлять
+aller,идти
+amener,"приводить, приносить"
+amour (m),любовь
+amuser,развлекать
+ancien,древний
+année (f),год
+annoncer,объявлять
+apercevoir,замечать
+apparaître,появляться
+appel (m),"зов, сигнал"
+appeler,называть
+apporter,приносить
+apprendre,учиться
+approcher,приближать
+arbre (m),дерево
+argent (m),"деньги, серебро"
+arme (f),"оружие, армия"
+armée (f),"армия, войско"
+arranger,"размещать, организовывать"
+arrêter,"останавливать, арестовывать"
+arriver,приезжать
+asseoir,усаживаться
+assurer,уверять
+attaquer,"нападать, атаковать"
+atteindre,достигать
+attendre,ждать
+attention (f),внимание
+autre,другой
+avancer,продвигаться
+avenir (m),будущее
+avion (m),самолёт
+avis (m),"мнение, совет"
+avoir,"иметь, обладать"
+baisser,опускать
+balle (f),мяч
+bateau (m),лодка
+battre,бить
+beau,красивый
+bébé (m),"ребёнок, младенец"
+besoin (m),"нужда, потребность"
+bizarre,странный
+blanc,белый
+bleu,"голубой, синий"
+boire,пить
+bois (m),"лес, дерево"
+boîte (f),"ящик, коробка"
+bonheur (m),"счастье, благополучие"
+bonjour (m),приветствие (если говорим про существительное)
+bonne (f),хорошая
+bord (m),край
+bouche (f),рот
+bouger,шевелиться
+boulot (m),"батон (хлеба), толстяк"
+bout (m),"конец, кончик"
+bras (m),рука
+bruit (m),шум
+brûler,жечь
+bureau (m),"письменный стол, офис, рабочий кабинет"
+cacher,прятать
+café (m),"кофе, кафе"
+calmer,успокаивать
+camp (m),лагерь
+capitaine (m),капитан
+carte (f),карта
+casser,"ломать, бить"
+cause (f),причина
+certain,"определенный, некоторый"
+cesser,прекращать
+chambre (f),комната (спальня)
+chance (f),"удача, везение, случай"
+changer,менять
+chanter,петь
+charger,грузить
+chat (m),кошка
+chaud,жаркий
+chef,"(m) начальник, глава"
+chemin (m),"дорога, путь"
+cher,дорогой
+chercher,искать
+chéri (m),дорогой
+cheval (m),лошадь
+cheveu (m),волос
+chien (m),собака
+choisir,выбирать
+choix (m),выбор
+chose (f),вещь
+ciel (m),небо
+clair,ясный
+classe (f),класс
+client (m),клиент
+cœur (m),сердце
+coin (m),угол
+colonel (m),полковник
+commencer,начинать
+comprendre,"понимать, содержать"
+compte (m),счет
+compter,считать
+conduire,"вести, управлять"
+confiance (f),"доверие, вера"
+connaître,знать
+content,довольный
+continuer,продолжать
+copain (m),друг
+corps (m),тело
+côté (m),сторона
+coucher,укладывать (спать)
+couleur (f),"цвет, окраска"
+coup (m),удар
+couper,"резать, стричь"
+cour (f),"двор, суд"
+courant (m),"поток, ток"
+courir,бежать
+cours (m),"течение, ход"
+couvrir,закрывать
+craindre,"бояться, опасаться"
+crier,кричать
+croire,"верить, считать, полагать"
+cuisine (f),кухня
+dame (f),"дама, женщина"
+danser,танцевать
+début (m),начало
+décider,решать
+découvrir,"открывать, раскрывать"
+dégager,"выкупать, освобождать"
+demander,просить
+dent (f),"зуб, клык"
+départ (m),"выезд, отправление"
+dernier,последний
+descendre,спускаться
+désolé,огорченный
+désoler,огорчать
+détester,ненавидеть
+détruire,разрушать
+devenir,"делаться, становиться"
+deviner,угадывать
+devoir,быть должным
+dieu (m),бог
+différent,"различный, отличный"
+difficile,трудный
+dire,говорить
+disparaître,"исчезать, скрываться"
+docteur (m),врач
+doigt (m),палец
+dollar (m),доллар
+donner,давать
+dormir,спать
+doute (m),сомнение
+doux,сладкий
+droit,правый
+droit (m),право
+droite (f),"прямая линия, правая сторона"
+drôle,смешной
+échapper,избегать
+école (f),школа
+écouter,слушать
+écrire,писать
+effet (m),эффект
+église (f),церковь
+éloigner,удалять (держать вдали)
+embrasser,обнимать
+emmener,увозить
+empêcher,мешать
+emporter,"уносить, увозить"
+endroit (m),место
+enfant,"(m, f) ребенок"
+enlever,"снимать, похищать"
+ennemi (m),враг
+entendre,"слышать, понимать"
+entier,"целый, полный"
+entrer,"вводить, вносить, ввозить"
+envie (f),"желание, зависть"
+envoyer,"посылать, отправлять"
+épaule (f),плечо
+époque (f),эпоха
+équipe (f),"отряд, бригада, команда"
+erreur (f),"ошибка, заблуждение"
+escalier (m),лестница
+espèce (f),"порода, род, вид"
+espérer,"ожидать, надеяться"
+esprit (m),"ум, сознание"
+essayer,пробовать
+état (m),государство
+étrange,странный
+être,быть
+être (m),"бытие, существо"
+éviter,избегать
+excuser,извинять
+exemple (m),пример
+exister,существовать
+expliquer,объяснять
+face (f),лицо
+facile,легкий
+façon (f),"фасон, покрой"
+faim (f),голод
+faire,делать
+fait (m),"дело, факт"
+falloir,надлежать
+famille (f),семья
+faute (f),"ошибка, промах"
+faux,ложный
+femme (f),"женщина, жена"
+fenêtre (f),окно
+fermer,закрывать
+fête (f),праздник
+filer,прясть
+fille (f),дочь
+film (m),фильм
+fils (m pl),сын
+finir,кончать
+fleur (f),цветок
+flic (m),полицейский
+fois (f),раз
+fond (m),"дно, фон"
+force (f),сила
+forme (f),форма
+fort,сильный
+foutre,"делать (груб), швырять, влепить"
+français,французский
+français (m),француз
+frapper,бить
+frère (m),брат
+froid,холодный
+front (m),"лоб, фронт, перед"
+gagner,зарабатывать
+garçon (m),мальчик
+garde,"(f) охрана, (m) гвардеец, сторож, часовой"
+garder,"охранять, беречь"
+gars (m),парень
+gauche,"(f)левая рука, левая сторона"
+général (m),"общее, генерал"
+genre (m),род
+gens (pl),люди
+gentil,милый
+geste,"(m) жест, (f) подвиг, деяние"
+glisser,скользить
+gosse,"(m,f) парень, девушка, мальчишка, девчонка"
+goût (m),вкус
+gouvernement (m),правительство
+grand,большой
+grand (m),большой
+grave,"тяжелый, важный, серьезный"
+gros,"толстый, крупный"
+groupe (m),группа
+guerre (f),война
+gueule (f),"горло, пасть"
+habiter,жить
+habitude (f),привычка
+haut,высокий
+haut (m),"высота, верх"
+heure (f),час
+heureux,счастливый
+histoire (f),история
+homme (m),человек
+honneur (m),честь
+hôtel (m),отель
+humain,"человечный, человеческий"
+idée (f),"понятие, идея"
+ignorer,"игнорировать, не знать"
+image (f),"изображение, картинка"
+imaginer,воображать
+important,важный
+importer,"импортировать, привозить"
+impossible,невозможный
+impression (f),"впечатление, оттиск, отпечаток, след"
+inquiéter,"беспокоить, тревожить, смущать"
+installer,"устраивать, устанавливать, размещать"
+instant (m),момент
+intéresser,интересовать
+intérêt (m),интерес
+intérieur (m),внутренность
+inviter,приглашать
+jambe (f),нога
+jardin (m),сад
+jeter,"бросать, кидать"
+jeune,молодой
+joie (f),радость
+joli,"красивый, милый"
+jouer,играть
+jour (m),день
+journal (m),"газета, дневник"
+journée (f),день
+jurer,"кляться, поручиться"
+juste,справедливый
+lâcher,"отпускать, ослаблять"
+laisser,оставлять
+lancer,"запускать, бросать, швырять, метать"
+langue (f),язык
+léger,легкий
+lettre (f),"буква, письмо"
+lever,"поднимать, устранять, отменять"
+lèvre (f),губа
+libre,свободный
+lieu (m),место
+ligne (f),"линия, черта"
+lire,читать
+livre,"(m) книга, (f) фунт"
+long,длинный
+long (m),длина
+lumière (f),свет
+madame (f),"госпожа, сударыня"
+main (f),рука (кисть)
+maintenir,"поддерживать, обслуживать"
+maison (f),дом
+maître (m),"господин, хозяин, мастер"
+malade,больной
+maman (f),мама
+manger,есть
+manière (f),"образ действия, манера"
+manquer,"отсутствовать, недоставать, не хватать"
+marche (f),ходьба
+marcher,идти
+mari (m),муж
+mariage (m),брак
+marier,"женить, выдавать замуж"
+matin (m),утро
+mauvais,плохой
+médecin (m),врач
+meilleur,лучший
+même,"такой же, одинаковый"
+mener,"вести, руководить"
+mentir,лгать
+merci,"(f) милосердие, пощада, (m) благодарность, спасибо"
+merde (f),дерьмо
+mère (f),мать
+mètre (m),метр
+mettre,класть
+milieu (m),середина
+million (m),миллион
+minute (f),минута
+mois (m),месяц
+moment (m),"момент, мгновение"
+monde (m),"мир, свет"
+monsieur (m),Господин
+monter,"подниматься, всходить"
+montrer,показывать
+mort,мертвый
+mort,"(f) смерть, (m) покойник, мертвец"
+mourir,умирать
+mouvement (m),движение
+moyen (m),средство
+musique (f),музыка
+naître,рождаться
+noir,черный
+noir (m),черный (цвет)
+nouveau,новый
+nouveau (m),"новое, новизна"
+nuit (f),ночь
+numéro (m),номер
+obliger,обязывать
+occuper,занимать
+odeur (f),запах
+oeil (m),глаз
+offrir,предлагать
+oiseau (m),птица
+ombre,"(f) тень, (m) хариус"
+oncle (m),дядя
+ordre (m),порядок
+oreille (f),ухо
+oser,"отважиться, сметь"
+oublier,забывать
+ouvrir,открывать
+paix (f),мир
+papa (m),папа
+papier (m),бумага
+paraître,"показываться, появляться"
+pareil,похожий
+parent (m),родственник
+parler,говорить
+parole (f),"слово, речь"
+part,"(f) часть, доля (m) юр: новорожденный ребенок, роды у животных"
+partie (f),часть
+partir,уезжать
+passage (m),"прохождение, переход, проход"
+passé (m),прошлое
+passer,"переправляться, передавать"
+patron (m),босс
+pauvre,бедный
+payer,платить
+pays (m),страна
+peau (f),"кожа, шкура"
+peine (f),наказание
+pensée (f),"мышление, размышление"
+penser,думать
+perdre,терять
+père (m),отец
+permettre,разрешать
+personne (f),"человек, личность"
+petit,маленький
+petit (m),маленький
+peuple (m),люди
+peur (f),страх
+photo (f),фотография
+pièce (f),"кусок, часть"
+pied (m),"нога, ступня, фут"
+pierre (f),камень
+place (f),"место, площадь"
+plaire,нравиться
+plaisir (m),удовольствие
+plan (m),план
+plein,полный
+pleurer,плакать
+poche,(f) карман
+point (m),точка
+police (f),"полиция, полис"
+porte (f),дверь
+porter,нести
+poser,класть
+possible,возможный
+pousser,толкать
+pouvoir,"мочь, быть в состоянии"
+pouvoir (m),власть
+préférer,предпочитать
+premier,первый
+premier (m),первый
+prendre,брать
+préparer,подготавливать
+présence (f),присутствие
+présent (m),настоящее время
+présenter,представлять
+président (m),президент
+prêt,готовый
+prévenir,предупреждать
+prier,"молить, просить"
+prince (m),"государь, принц"
+prison (f),тюрьма
+prix (m),цена
+problème (m),проблема
+prochain,"будущий, ближний"
+professeur,"(m) преподавать, учитель"
+promettre,"обещать, предвещать"
+propos (m),"речь, разговор, намерение, мотив"
+proposer,предлагать
+propre,собственный
+protéger,протежировать
+putain (f),проститутка
+quartier (m),"четверть, часть"
+question (f),вопрос
+quitter,покидать
+quoi,"что — Вообще-то это не прилагательное, а междометие. Или я что-то не так поняла."
+raconter,рассказывать
+raison (f),"разум, рассудок, интеллект"
+ramener,"приводить обратно, отводить"
+rappeler,"призывать, напоминать"
+rapport (m),доход
+recevoir,получать
+reconnaître,"узнавать, признавать"
+réfléchir,"отражать, размышлять"
+refuser,отказываться
+regard (m),взгляд
+regarder,смотреть
+rejoindre,соединять
+remarquer,замечать
+remettre,"снова класть, помещать на прежнее место"
+remonter,снова подниматься
+rencontrer,"встречать, встречаться"
+rendre,"отдавать, возвращать"
+rentrer,возвращаться
+répéter,повторять
+répondre,"отвечать, возражать"
+réponse (f),ответ
+reposer,"отдыхать, давать отдых, снова класть"
+reprendre,снова брать
+ressembler,"походить, быть похожим"
+reste (m),остаток
+rester,оставаться
+retard (m),"задержка, опоздание"
+retenir,"задерживать, принимать во внимание, держать в уме"
+retirer,"отнимать, забирать"
+retour (m),возвращение
+retourner,переворачивать
+retrouver,снова найти
+réussir,"удаваться, иметь успех"
+rêve (m),"сон, мечта"
+réveiller,будить
+revenir,"снова приходить, возвращаться, вспоминаться"
+rêver,"мечтать, видеть сон"
+revoir,"увидеть еще раз, пересматривать"
+revoir (m),"пересмотр, новая встреча"
+rire,смеяться
+risquer,рисковать
+robe (f),платье
+rouge,красный
+rouler,катить
+route (f),"дорого, путь"
+sale,"грязный, мерзкий"
+salle (f),комната
+salut (m),"спасение, привет!"
+sang (m),кровь
+sauter,"подскакивать, прыгать"
+sauver,спасать
+savoir,знать
+scène (f),сцена
+seconde (f),секунда
+secret (m),секрет
+sécurité (f),безопасность
+seigneur (m),"владетель, властитель"
+semaine (f),неделя
+sembler,казаться
+sens (m),чувство
+sentiment (m),чувство
+sentir,чувствовать
+séparer,разделять
+sérieux,серьезный
+serrer,"сжимать, стискивать, жать"
+service (m),"служба, обслуживание"
+servir,служить
+seul,"одинокий, единственный"
+seul (m),один
+siècle (m),век
+signe (m),знак
+silence (m),"молчание, тишина"
+simple,простой
+situation (f),местоположение
+soeur (f),сестра
+soir (m),вечер
+soirée (f),вечер
+soldat (m),солдат
+soleil (m),солнце
+sorte (f),"сорт, род"
+sortir,выходить
+souffrir,страдать
+sourire,улыбаться
+sourire (m),улыбка
+souvenir,"помнить, вспоминать"
+souvenir (m),"память, воспоминание"
+suffire,"хватать, быть достаточным"
+suite (f),продолжение
+suivre,"следовать, идти за…"
+sujet (m),тема
+super,классный
+table (f),стол
+taire,"замалчивать, скрывать"
+téléphone (m),телефон
+temps (m),"время, погода"
+tendre,"натягивать, напрягать"
+tenir,держать
+tenter,"искушать, соблазнять"
+terminer,заканчивать
+terre (f),земля
+tête (f),голова
+tirer,тащить
+tomber,падать
+toucher,"касаться, трогать"
+tour,"(m) оборот, поворот, (f) башня, вышка"
+tourner,"поворачивать, вращать"
+tout,"любой, каждый, целый"
+tout (m),всё
+toute (f),"любая, каждая"
+train (m),поезд
+traîner,"тащить, тянуть"
+traiter,обращаться (с кем-то каким-то образом)
+tranquille,спокойный
+travail (m),работа
+travailler,работать
+travers (m),"поперечный диаметр, траверз"
+traverser,"пересекать, переходить, переезжать"
+triste,грустный
+tromper,обманывать
+trou (m),отверстие
+trouver,находить
+truc (m),"уловка, штуковина, «фигня»"
+tuer,убивать
+type (m),тип
+utiliser,использовать
+valoir,"стоить, иметь ценность"
+vendre,продавать
+venir,приходить
+vent (m),ветер
+ventre (m),живот
+vérité (f),правда
+verre (m),"стекло, стакан"
+vert,зеленый
+vide,пустой
+vieux,старый
+vieux (m),старик
+village (m),деревня
+ville (f),город
+visage (m),лицо
+vivant,живой
+vivre,жить
+voir,видеть
+voiture (f),"автомобиль, вагон"
+voix (f),голос
+voler,летать
+vouloir,хотеть
+voyage (m),путешествие
+vrai,правдивый
