@@ -31,9 +31,14 @@ async def help(message:types.Message):
 
 @dp.message_handler(commands=['start'])
 async def start_bot(message:types.Message):
-    await languages.chosen.set()
-    await message.reply(choice(replicas.messages['greeting']), reply_markup=kb.word_packs_keyboard)
+    await message.reply(choice(replicas.messages['greeting']), reply_markup=kb.next_keyboard)
 
+
+@dp.message_handler()
+async def start_bot(message:types.Message):
+    if message.text == "Далее":
+        await languages.chosen.set()
+        await message.answer("Выберите язык для изучения из предложенных.", reply_markup=kb.word_packs_keyboard)
 
 @dp.message_handler(state=languages.chosen)
 async def f(message:types.Message, state: FSMContext):
@@ -93,7 +98,7 @@ async def end3(message:types.Message, state: FSMContext):
             data['current_number'] += 1
             if data['current_number'] == data['per_session']:
                 await languages.to_learn.set()
-                await message.reply("Ваша тренировка завершена, отдохните2.", reply_markup=kb.main_keyboard)
+                await message.reply("Ваша тренировка завершена, отдохните.", reply_markup=kb.main_keyboard)
                 return None
 
 

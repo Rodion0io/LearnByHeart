@@ -4,6 +4,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 return_button = KeyboardButton('Завершить сеанс')
 back_button = KeyboardButton('Назад')
 
+next_keyboard = ReplyKeyboardMarkup(resize_keyboard=True).row(KeyboardButton("Далее"))
+
 main_keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 main_keyboard.row(KeyboardButton("Учить новые слова"))
 
