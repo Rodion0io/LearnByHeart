@@ -86,6 +86,7 @@ async def end3(message:types.Message, state: FSMContext):
             print(word)
             await message.reply(f"Запоминайте: {' '.join(word)}.", reply_markup=kb.new_words_keyboard)
 
+            word = get_word(data['chosen'])
             data['current_word'] = word
             data['all_the_words'].append(word)
 
@@ -95,7 +96,7 @@ async def end3(message:types.Message, state: FSMContext):
                 await message.reply("Ваша тренировка завершена, отдохните2.", reply_markup=kb.main_keyboard)
                 return None
 
-            word = get_word(data['chosen'])
+
             await message.reply(f"Вы знаете, как переводится '{word[0]}'?", reply_markup=kb.new_words_keyboard)
 
 
