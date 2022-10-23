@@ -1,6 +1,7 @@
 import config
 import replicas
 import keyboards as kb
+
 import asyncio
 
 from aiogram import types, Bot
@@ -28,12 +29,12 @@ class User(StatesGroup):
     repetition = State()
 
 
-@dp.message_handler(commands=['help'], state=None)
+@dp.message_handler(commands=['help'], state='*')
 async def helping(message: types.Message):
     await message.reply(replicas.messages['help'])
 
 
-@dp.message_handler(commands=['start'])
+@dp.message_handler(commands=['start'], state='*')
 async def start(message: types.Message):
     await message.reply(choice(replicas.messages['greeting']), reply_markup=kb.next_keyboard)
 
@@ -56,6 +57,9 @@ async def choose(message: types.Message, state: FSMContext):
         await message.answer("Такого языка у нас нет. Попробуйте еще раз (пользуйтесь клавиатурой).",
                              reply_markup=kb.word_packs_keyboard)
         return None
+
+
+a = ""
 
 
 @dp.message_handler(state=User.to_learn)
@@ -89,6 +93,8 @@ async def start_learning(message: types.Message, state: FSMContext):
 
 @dp.message_handler(state=User.learning)
 async def end3(message: types.Message, state: FSMContext):
+    global a
+
     if message.text == "Завершить сеанс":
         await message.reply(f"Хорошо, завершаю.", reply_markup=kb.main_keyboard)
         await User.to_learn.set()
@@ -102,8 +108,11 @@ async def end3(message: types.Message, state: FSMContext):
             word = list(data['current_word'][:-1]) + ['—'] + [data['current_word'][-1]]
 
             data['all_the_words'].append(word)
+            if data['current_number'] + 1 == data['per_session']:
+                a = word
 
-            await message.reply(f"Запоминайте: {' '.join(word)}.", reply_markup=kb.new_words_keyboard)
+            text = f"Запоминайте: {' '.join(word)}."
+            await message.reply(text, reply_markup=kb.new_words_keyboard)
 
             word = get_word(data['chosen'])
             data['current_word'] = word
@@ -111,6 +120,7 @@ async def end3(message: types.Message, state: FSMContext):
             data['current_number'] += 1
             if data['current_number'] == data['per_session']:
                 await User.to_learn.set()
+
                 await message.reply("Ваша тренировка завершена, отдохните.", reply_markup=kb.main_keyboard)
                 await asyncio.sleep(5)
                 await repeat(message, state)
@@ -141,12 +151,13 @@ CNT = 0
 
 @dp.message_handler(state=User.repetition)
 async def repetition_function(message: types.Message, state: FSMContext):
-    global CNT
+    global CNT, a
 
     if message.text == "Завершить сеанс":
         await message.answer("Хорошо, жду вас снова через 24 часа (напомню).", reply_markup=kb.main_keyboard)
         CNT = 0
         async with state.proxy() as data:
+            a = ''
             data['all_the_words'] = []
             data['current_word'] = []
             data['current_number'] = 0
@@ -154,13 +165,21 @@ async def repetition_function(message: types.Message, state: FSMContext):
         await User.to_learn.set()
         await asyncio.sleep(24 * 60 * 60)
 
-    if message.text == 'Не помню':
+    if message.text in ('Не помню', "Хочу проверить себя"):
         async with state.proxy() as data:
+            if a and a not in data['all_the_words']:
+                data['all_the_words'].append(a)
             if CNT < len(data['all_the_words']):
                 if 'index' not in data:
                     data['index'] = 0
                 word = data['all_the_words'][CNT]
-                await message.answer(f"Вспоминайте: {' '.join(word)}.")
+
+                if message.text == "Не помню":
+                    text = f"Вспоминайте: {' '.join(word)}."
+                else:
+                    text = f"На здоровье, вот, сверьтесь: {' '.join(word)}."
+
+                await message.answer(text, reply_markup=kb.learning_keyboard)
 
                 if CNT + 1 < len(data['all_the_words']):
                     CNT += 1
@@ -173,6 +192,8 @@ async def repetition_function(message: types.Message, state: FSMContext):
 
     elif message.text == "Помню":
         async with state.proxy() as data:
+            if a and a not in data['all_the_words']:
+                data['all_the_words'].append(a)
             if CNT + 1 < len(data['all_the_words']):
                 if 'index' not in data:
                     data['index'] = 0
@@ -184,11 +205,13 @@ async def repetition_function(message: types.Message, state: FSMContext):
 
 
 async def repeat(message, state, finish=False):
-    global CNT
+    global CNT, a
+
     if message.text == "Завершить сеанс":
         await message.answer("Хорошо, жду вас снова через 24 часа (напомню).", reply_markup=kb.main_keyboard)
         CNT = 0
         async with state.proxy() as data:
+            a = ''
             data['all_the_words'] = []
             data['current_word'] = []
             data['current_number'] = 0
@@ -209,6 +232,8 @@ async def repeat(message, state, finish=False):
         await asyncio.sleep(24 * 60 * 60)
 
     async with state.proxy() as data:
+        if a and a not in data['all_the_words']:
+            data['all_the_words'].append(a)
         if len(data['all_the_words']) > CNT:
             word = data['all_the_words'][CNT]
             await message.answer(f"Помните, как переводится '{word[0]}'?", reply_markup=kb.learning_keyboard)
