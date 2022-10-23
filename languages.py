@@ -1,5 +1,7 @@
 import pandas as pd
+
 from random import choice
+
 
 en = list(pd.read_csv("oxford_3000.csv").values)
 fr = list(pd.read_csv("french.csv").values)
@@ -13,5 +15,3 @@ def get_word(language: str):
         return choice(fr)
     elif language == "Немецкий":
         return choice(de)[-1::-1]
-    else:
-        return 42
