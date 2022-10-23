@@ -98,7 +98,7 @@ async def end3(message: types.Message, state: FSMContext):
     if message.text == "Завершить сеанс":
         await message.reply(f"Хорошо, завершаю.", reply_markup=kb.main_keyboard)
         await User.to_learn.set()
-        await asyncio.sleep(5)
+        await asyncio.sleep(60*60)
         await repeat(message, state)
 
         return None
@@ -122,7 +122,7 @@ async def end3(message: types.Message, state: FSMContext):
                 await User.to_learn.set()
 
                 await message.reply("Ваша тренировка завершена, отдохните.", reply_markup=kb.main_keyboard)
-                await asyncio.sleep(5)
+                await asyncio.sleep(60*60)
                 await repeat(message, state)
 
                 return None
@@ -138,7 +138,7 @@ async def end3(message: types.Message, state: FSMContext):
             if data['current_number'] == data['per_session']:
                 await User.to_learn.set()
                 await message.reply("Ваша тренировка завершена, отдохните.", reply_markup=kb.main_keyboard)
-                await asyncio.sleep(5)
+                await asyncio.sleep(60*60)
                 await repeat(message, state)
                 return None
 
